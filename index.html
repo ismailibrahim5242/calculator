@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 350px !important;
+            min-height: 75vh;
+            background-color: black;
+            margin: 70px auto;
+            border-radius: 30px;
+        }
+
+        #res{
+            width: 300px;
+            height: 90px;
+            margin: 50px auto auto 33px;
+            border-radius: 15px;
+            box-shadow: inset 0 0 30px 5px lightgrey;
+            text-align: right;
+            border: none;
+            font-weight: lighter;
+            font-size: xx-large;
+            border-radius: 35px;
+            font-family: serif;
+            margin: 5px 0;
+        }
+        .box{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin: 60px auto auto 33px;
+            padding: 10px auto 20px auto;
+        }
+
+        button{
+            width: 50px;
+            height: 50px;
+            border-radius: 70px;
+            box-shadow: inset 6px 13px white;
+            font-weight: bold;
+            font-size: large;
+            font-family: serif;
+            margin: 5px 0;
+        }
+        .ash{
+            grid-column: span 2;
+            width: 100px;
+            margin-left: 10px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 align="center" style="color: blue;">WELCOME TO CALCULATOR</h1>
+
+    <section>
+        <input type="text" name="" id="res" placeholder="0">
+
+        <div class="box">
+      <button class="ash" onclick="ac()">AC</button>
+      <button class="ash" onclick="del()">DEL</button>
+      <button onclick="calc('7')">7</button>
+      <button onclick="calc('8')">8</button>
+      <button onclick="calc('9')">9</button>
+      <button onclick="calc('/')">/</button>
+      <button onclick="calc('4')">4</button>
+      <button onclick="calc('5')">5</button>
+      <button onclick="calc('6')">6</button>
+      <button onclick="calc('*')">*</button>
+      <button onclick="calc('1')">1</button>
+      <button onclick="calc('2')">2</button>
+      <button onclick="calc('3')">3</button>
+      <button onclick="calc('+')">+</button>
+      <button onclick="calc('0')">0</button>
+      <button onclick="calc('.')">.</button>
+      <button onclick="result()" id="eqls">=</button>
+      <button onclick="calc('-')">-</button>
+
+
+        </div>
+    </section>
+
+    <script>
+        console.log("olamide")
+
+        function calc(params) {
+            res.value += params;
+        }
+        //function result(params){
+         //   res.value = params
+        //}
+        function result() {
+            res.value = eval(res.value);
+        }
+        function ac() {
+            res.value =""
+        }
+        function del () {
+            res.value = res.value.slice(0,-1)
+        }
+
+        fun
+    </script>
+</body>
+</html>
